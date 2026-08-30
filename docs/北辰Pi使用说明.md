@@ -1,5 +1,7 @@
 # 北辰 Pi 1.8.1 完整使用说明
 
+> English version: [Beichen Pi 1.8.1 Complete User Guide](USER_GUIDE_EN.md)
+
 > 北辰 Pi 是独立、非官方的第三方开源项目，与所支持的模型服务商不存在隶属、合作或官方背书关系。
 >
 > Agent 模式不是安全沙箱：它能够以当前 Windows 用户权限执行 PowerShell、读取和修改工作目录文件并加载 Pi 扩展。只打开可信项目，重要数据先使用 Git 和离线备份保护。

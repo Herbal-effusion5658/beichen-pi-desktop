@@ -2,6 +2,7 @@
 
 ## 1.8.1 — 2026-08-30
 
+- Reframed the project as a local-first minimalist agent platform, moved post-turn context controls to the top of the project introduction, and added a fully bilingual README plus a complete English user guide.
 - Added independent model, reasoning, and context-mode controls with complete token telemetry.
 - Added Codex, Benchmark, Ultra Max, Quantum Collapse, and Ghost Payload behavior.
 - Added custom API and local-model endpoints with Windows-encrypted credentials.

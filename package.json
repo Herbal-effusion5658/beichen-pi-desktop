@@ -5,7 +5,7 @@
   "private": true,
   "license": "MIT",
   "author": "北辰捡垃圾",
-  "description": "北辰 Pi 桌面端：ChatGPT/Codex 双模式的 Pi 图形客户端",
+  "description": "Local-first minimalist desktop agent platform built on Pi with explicit context lifecycle controls",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/opopile/beichen-pi-desktop.git"
