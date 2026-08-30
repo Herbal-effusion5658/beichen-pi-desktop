@@ -1,0 +1,111 @@
+{
+  "name": "beichen-pi-desktop",
+  "version": "1.8.1",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "author": "北辰捡垃圾",
+  "description": "北辰 Pi 桌面端：ChatGPT/Codex 双模式的 Pi 图形客户端",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opopile/beichen-pi-desktop.git"
+  },
+  "homepage": "https://github.com/opopile/beichen-pi-desktop#readme",
+  "bugs": {
+    "url": "https://github.com/opopile/beichen-pi-desktop/issues"
+  },
+  "main": "electron/main.cjs",
+  "scripts": {
+    "prepare:runtime": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/prepare-runtime.ps1",
+    "dev": "concurrently -k \"vite --host 127.0.0.1\" \"wait-on tcp:5173 && cross-env VITE_DEV_SERVER_URL=http://127.0.0.1:5173 electron .\"",
+    "build": "vite build",
+    "test": "node --test tests/*.test.mjs",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run test && npm run build",
+    "predist": "npm run prepare:runtime",
+    "dist": "npm run check && electron-builder --win nsis portable",
+    "dist:dir": "npm run prepare:runtime && npm run check && electron-builder --win dir"
+  },
+  "engines": {
+    "node": ">=24.19.0 <25"
+  },
+  "dependencies": {
+    "@earendil-works/pi-coding-agent": "0.84.4",
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.2",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.0.0",
+    "electron": "44.0.0",
+    "electron-builder": "^26.0.12",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.3",
+    "wait-on": "^8.0.4"
+  },
+  "build": {
+    "appId": "com.beichen.pi",
+    "productName": "北辰 Pi",
+    "asar": true,
+    "asarUnpack": [
+      "node_modules/@earendil-works/**",
+      "node_modules/jiti/**",
+      "resources/pi-extensions/**"
+    ],
+    "directories": {
+      "output": "release",
+      "buildResources": "output"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "resources/pi-extensions/**/*",
+      "output/北辰标志_极简漩涡聚焦版_v10.png",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "resources/runtime/node.exe",
+        "to": "runtime/node.exe"
+      }
+    ],
+    "extraMetadata": {
+      "main": "electron/main.cjs"
+    },
+    "win": {
+      "icon": "output/北辰标志_极简漩涡聚焦版_v10.png",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "artifactName": "Beichen-Pi-Setup-${version}-${arch}.${ext}",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "北辰 Pi"
+    },
+    "portable": {
+      "artifactName": "Beichen-Pi-Portable-${version}-${arch}.${ext}"
+    }
+  }
+}
