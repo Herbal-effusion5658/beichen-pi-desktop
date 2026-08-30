@@ -1,0 +1,36 @@
+# Dependencies and generated builds
+node_modules/
+dist/
+release/
+coverage/
+.vite/
+
+# Local test evidence and generated artwork; keep only the production icon
+output/*
+!output/北辰标志_极简漩涡聚焦版_v10.png
+
+# Downloaded Windows runtime (created by npm run prepare:runtime)
+resources/runtime/node.exe
+resources/runtime/node-*.zip
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+auth.json
+settings.json
+models.json
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Logs, sessions, caches, and OS/editor files
+*.log
+*.jsonl
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
